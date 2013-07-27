@@ -1,11 +1,5 @@
-
-;; Default tab width is 2 spaces
-(setq-default tab-width 2)
-(setq-default indent-tabs-mode nil)
-(setq tab-width 2)
-
-;; No more backup-files~
-(setq backup-directory-alist `(("." . "~/.saves")))
+;; Indent region
+(global-set-key "\C-t" 'indent-region)
 
 ;; align-regexp with C-a r
 (global-unset-key "\C-a")
@@ -29,4 +23,22 @@
 (add-to-list 'auto-mode-alist '("Rakefile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
 
+;; Add HTML & RHTML mode
+(setq auto-mode-alist (cons '("\\.html$" . html-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.rhtml$" . html-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.erb$" . html-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.html.erb$" . html-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.iphone.erb$" . html-mode) auto-mode-alist))
 
+;; Set tab-width to 2
+(setq-default tab-width 2)
+(setq-default indent-tabs-mode nil)
+(setq tab-width 2)
+
+;; Custom emacs backup file configuration
+(setq backup-directory-alist '(("." . "~/.emacs.d/backup"))
+     backup-by-copying t            ; Don't delink hardlinks
+     version-control t              ; Use version numbers on backups
+     delete-old-versions t          ; Automatically delete excess backups
+     kept-new-versions 20           ; how many of the newest versions to keep
+     kept-old-versions 5)           ; and how many of the old
