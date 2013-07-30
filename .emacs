@@ -23,12 +23,8 @@
 (add-to-list 'auto-mode-alist '("Rakefile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
 
-;; Add HTML & RHTML mode
-(setq auto-mode-alist (cons '("\\.html$" . html-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.rhtml$" . html-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.erb$" . html-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.html.erb$" . html-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.iphone.erb$" . html-mode) auto-mode-alist))
+;; CSS mode
+(add-to-list 'auto-mode-alist '("\\.scss$" . css-mode))
 
 ;; Set tab-width to 2
 (setq-default tab-width 2)
@@ -42,3 +38,15 @@
      delete-old-versions t          ; Automatically delete excess backups
      kept-new-versions 20           ; how many of the newest versions to keep
      kept-old-versions 5)           ; and how many of the old
+
+
+(add-to-list 'load-path "~/dev/emacs2/rhtml")
+(require 'rhtml-mode)
+
+;; Add HTML & RHTML mode
+(setq auto-mode-alist (cons '("\\.html$" . rhtml-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.rhtml$" . rhtml-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.erb$" . rhtml-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.html.erb$" . rhtml-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.iphone.erb$" . rhtml-mode) auto-mode-alist))
+
