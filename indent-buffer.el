@@ -14,7 +14,9 @@
               (string-match "Rakefile" buffer-file-name)
               ;; Javascript files
               (string-match "\\.js$" buffer-file-name)
-
+              ;; CSS files
+              (string-match "\\.css$" buffer-file-name)
+              (string-match "\\.scss$" buffer-file-name)
               ))
     (indent-entire-buffer)))
 
