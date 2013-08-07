@@ -9,4 +9,4 @@
               ))
     (js-beautify-buffer)))
 
-(add-hook 'before-save-hook 'beautify-if-javascript)
+;; (add-hook 'before-save-hook 'beautify-if-javascript)

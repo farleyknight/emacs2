@@ -108,19 +108,19 @@ colorization."
 
 (defface erb-face
   '((((class color) (min-colors 88) (background dark))
-     :background "#383838")
+     :background "#000000")
     (((class color) (min-colors 88) (background light))
      ;; :background "azure")
-     :background "snow2")
+     :background "#000000")
     (((class color) (min-colors 16) (background dark))
-     :background "blue3")
+     :background "#000000")
     (((class color) (min-colors 16) (background light))
-     :background "azure")
+     :background "#000000")
     (((class color) (min-colors 8))
-     :background "blue")
+     :background "#000000")
     (((type tty) (class mono))
      :inverse-video t)
-    (t :background "gray"))
+    (t :background "#000000"))
   "Default inherited face for ERB tag body"
   :group 'rhtml-faces)
 
