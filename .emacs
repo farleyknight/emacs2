@@ -13,4 +13,4 @@
 (load "~/dev/emacs2/indent-buffer")
 (load "~/dev/emacs2/cleanup-file")
 (load "~/dev/emacs2/yml-mode")
-
+(load "~/dev/emacs2/php-mode")
