@@ -14,7 +14,7 @@
 (load "~/dev/emacs2/modes/markdown")
 
 ;; Functionality
-(load "~/dev/emacs2/backups")
-(load "~/dev/emacs2/keybindings")
-(load "~/dev/emacs2/indent-buffer")
-(load "~/dev/emacs2/cleanup-file")
+(load "~/dev/emacs2/functionality/backups")
+(load "~/dev/emacs2/functionality/keybindings")
+(load "~/dev/emacs2/functionality/indent-buffer")
+(load "~/dev/emacs2/functionality/cleanup-file")
