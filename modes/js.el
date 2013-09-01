@@ -1,4 +1,4 @@
-(load "~/dev/emacs2/js-beautify")
+(load "~/dev/emacs2/modes/js-beautify")
 
 (defun beautify-if-javascript ()
   (when (and (stringp buffer-file-name)
