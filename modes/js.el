@@ -1,4 +1,3 @@
-
 (load "~/dev/emacs2/js-beautify")
 
 (defun beautify-if-javascript ()

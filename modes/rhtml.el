@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/dev/emacs2/rhtml")
+(add-to-list 'load-path "~/dev/emacs2/modes/rhtml-mode")
 (require 'rhtml-mode)
 
 ;; Add HTML & RHTML mode
