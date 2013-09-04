@@ -2,5 +2,7 @@
 
 (autoload 'gfm-mode "markdown-mode" "Major mode for Markdown." t)
 
-(add-to-list 'auto-mode-alist '("README\\.md" . gfm-mode))
-(add-to-list 'auto-mode-alist '("\\.markdown$"  . gfm-mode))
+(add-to-list 'auto-mode-alist '("README\\.md"  . gfm-mode))
+(add-to-list 'auto-mode-alist '("\\.md$"       . gfm-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown$" . gfm-mode))
+

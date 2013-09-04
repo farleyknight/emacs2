@@ -4,7 +4,7 @@
   (indent-region (point-min) (point-max) nil))
 
 (defun indent-only-code ()
-  "Indent"
+  "Indent only files matching below"
   (when (and (stringp buffer-file-name)
              (or
               ;; Ruby files
@@ -14,10 +14,15 @@
               (string-match "Rakefile" buffer-file-name)
               ;; Javascript files
               (string-match "\\.js$" buffer-file-name)
+              ;; C# files
+              (string-match "\\.cs$" buffer-file-name)
+              ;; PHP files
+              (string-match "\\.php$" buffer-file-name)
               ;; CSS files
               (string-match "\\.css$" buffer-file-name)
               (string-match "\\.scss$" buffer-file-name)
-              ))
+              )
+             )
     (indent-entire-buffer)))
 
 (add-hook 'before-save-hook 'indent-only-code)
