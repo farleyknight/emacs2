@@ -10,12 +10,16 @@
 (load "~/dev/emacs2/modes/php")
 (load "~/dev/emacs2/modes/csharp")
 ;; TODO: Java
+;; TODO: Haskell
+;; TODO: Clojure
+;; TODO: Scala
 
 ;; Major Modes for Templates, Data Formats, etc
 (load "~/dev/emacs2/modes/css")
 (load "~/dev/emacs2/modes/rhtml")
 (load "~/dev/emacs2/modes/markdown")
 (load "~/dev/emacs2/modes/yml")
+(load "~/dev/emacs2/modes/json")
 ;; TODO: XML
 
 ;; Functionality
