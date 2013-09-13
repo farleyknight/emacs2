@@ -1,3 +1,4 @@
+;; Custom Ruby mode for better indentation
 (add-to-list 'load-path "~/dev/emacs2/modes/ruby-mode-indent")
 
 ;; Ruby mode by file extension
@@ -9,3 +10,8 @@
 (add-to-list 'auto-mode-alist '("Rakefile$"    . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$"     . ruby-mode))
 (add-to-list 'auto-mode-alist '("Guardfile$"   . ruby-mode))
+
+;; Standard configuration options
+(setq ruby-deep-indent-paren       nil)
+(setq ruby-deep-indent-paren-style nil)
+(setq ruby-deep-arglist            nil)
