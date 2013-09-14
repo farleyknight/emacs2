@@ -15,18 +15,23 @@
               (string-match "\\.html.erb$" buffer-file-name)
               (string-match "Gemfile" buffer-file-name)
               (string-match "Rakefile" buffer-file-name)
+              (string-match "Guardfile" buffer-file-name)
               ;; Javascript files
               (string-match "\\.js$" buffer-file-name)
               ;; JSON files
               (string-match "\\.json$" buffer-file-name)
               ;; C# files
               (string-match "\\.cs$" buffer-file-name)
+              ;; Scala files
+              (string-match "\\.scala$" buffer-file-name)
               ;; PHP files
               (string-match "\\.php$" buffer-file-name)
               ;; CSS files
               (string-match "\\.css$" buffer-file-name)
               (string-match "\\.css.erb$" buffer-file-name)
               (string-match "\\.scss$" buffer-file-name)
+              ;; HTML files
+              (string-match "\\.html$" buffer-file-name)
               )
              )
     (indent-entire-buffer)))
