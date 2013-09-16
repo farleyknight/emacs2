@@ -155,7 +155,7 @@
     (scala-forward-ignorable)
     (scala-case-p)))
 
-(defun scala-lambda-p ()
+(defun scala-lambda-p () 
   ;; Returns t if the block loocks like a lambda block.
   ;; Any block with a => at a line end is considered lambda.
   (save-excursion
@@ -166,7 +166,7 @@
          ;; jump over sexp untill we see '=>' or something
          ;; that does not belong. TODO: the real pattern
          ;; that we would like to skip over is id: Type
-         (progn
+         (progn 
            (scala-forward-ignorable)
            (ignore-errors
             (while (not (or (looking-at scala-double-arrow-re)
@@ -229,7 +229,7 @@
           (if (scala-lambda-p) ;; nested lambda block
               (scala-block-indentation case-or-eob)
             (+ (current-indentation) step)))
-      (progn ;; properly indent mulitline args in a template
+      (progn ;; properly indent mulitline args in a template                                    
         (skip-syntax-forward " ")
         (current-column)))))
 
@@ -241,7 +241,7 @@
     (cond
      ((eobp) nil)
      ;; curry
-     ((and (= (char-after) ?\()
+     ((and (= (char-after) ?\() 
            (save-excursion (scala-backward-ignorable) (= (char-before) ?\))))
       (backward-list)
       (current-column))
@@ -253,9 +253,9 @@
      ;; don't do any of the other stuff if the previous line was
      ;; just a closing brackets
      ((scala-after-brackets-line-p) nil)
-     ;; indent lines that start with . as in
+     ;; indent lines that start with . as in 
      ;; foo
-     ;;   .bar
+     ;;   .bar 
      ((and scala-mode-indent:dot-indent
            (eq (char-after) ?\.))
       (scala-backward-ident)
@@ -278,7 +278,7 @@
 
 (defun scala-indentation-from-preceding ()
   ;; Return suggested indentation based on the preceding part of the
-  ;; current expression, but not if it's separated by one or more empty line.
+  ;; current expression, but not if it's separated by one or more empty line. 
   ;; Return nil if indentation cannot be guessed.
   (save-excursion
     (let ((am-case (scala-case-line-p)))
@@ -364,6 +364,6 @@ When called repeatedly, indent each time one stop further on the right."
   (interactive)
   (if (scala-in-multi-line-comment-p)
       (progn
-        (newline-and-indent)
-        (insert "* "))
+	(newline-and-indent)
+	(insert "* "))
     (newline)))

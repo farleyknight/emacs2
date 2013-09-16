@@ -192,7 +192,7 @@ When started, run `scala-mode-hook'.
 	comment-end-skip              " *\\*+/\\| *"
 	comment-column                40
 ;	comment-indent-function       'scala-comment-indent-function
-	;;indent-line-function          'scala-indent-line
+  ;; indent-line-function       'scala-indent-line
   indent-line-function          'besi-indent-line
 	)
 

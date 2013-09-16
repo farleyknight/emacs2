@@ -11,8 +11,6 @@
 (load "~/dev/emacs2/functionality/cleanup-file")
 (load "~/dev/emacs2/functionality/make-directory-when-missing")
 
-;; (load "~/dev/emacs2/functionality/besi")
-
 
 ;; Major Modes for Languages
 (load "~/dev/emacs2/modes/js")
