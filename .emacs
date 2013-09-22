@@ -18,7 +18,7 @@
 (load "~/dev/emacs2/modes/php")
 (load "~/dev/emacs2/modes/csharp")
 (load "~/dev/emacs2/modes/scala")
-;; TODO: Java
+(load "~/dev/emacs2/modes/java")
 ;; TODO: Haskell
 ;; TODO: Clojure
 

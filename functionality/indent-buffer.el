@@ -10,7 +10,7 @@
   (when (and (stringp buffer-file-name)
              (or
               ;; Ruby files
-              (string-match "\\.rb$" buffer-file-name)
+              ;; (string-match "\\.rb$" buffer-file-name)
               (string-match "\\.rake$" buffer-file-name)
               (string-match "\\.html.erb$" buffer-file-name)
               (string-match "Gemfile" buffer-file-name)
@@ -18,6 +18,8 @@
               (string-match "Guardfile" buffer-file-name)
               ;; Javascript files
               (string-match "\\.js$" buffer-file-name)
+              ;; Java files
+              (string-match "\\.java$" buffer-file-name)
               ;; JSON files
               (string-match "\\.json$" buffer-file-name)
               ;; C# files
@@ -32,6 +34,8 @@
               (string-match "\\.scss$" buffer-file-name)
               ;; HTML files
               (string-match "\\.html$" buffer-file-name)
+              ;; XML files
+              (string-match "\\.xml$" buffer-file-name)
               )
              )
     (indent-entire-buffer)))
