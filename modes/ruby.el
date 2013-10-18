@@ -11,15 +11,10 @@
 (add-to-list 'auto-mode-alist '("Gemfile$"     . ruby-mode))
 (add-to-list 'auto-mode-alist '("Guardfile$"   . ruby-mode))
 
-;; Until I write crystal-mode
-(add-to-list 'auto-mode-alist '("\\.cr$"       . ruby-mode))
-
 ;; Standard configuration options
 (setq ruby-deep-indent-paren       nil)
 (setq ruby-deep-indent-paren-style nil)
 (setq ruby-deep-arglist            nil)
 
-;; Add RSpec mode
-;;(add-to-list 'load-path "~/dev/emacs2/modes/rspec-mode")
-;;(load "~/dev/emacs2/modes/rspec-mode/rspec-mode")
-;; (require 'rspec-mode)
+;; Ruby is not a C-mode, so we need to add this ourselves
+(global-set-key (kbd "C-c C-c") 'comment-region)

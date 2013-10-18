@@ -10,7 +10,9 @@
 (load "~/dev/emacs2/functionality/indent-buffer")
 (load "~/dev/emacs2/functionality/cleanup-file")
 (load "~/dev/emacs2/functionality/make-directory-when-missing")
-
+(load "~/dev/emacs2/functionality/cycle-buffer")
+(load "~/dev/emacs2/functionality/cycle-buffer-config")
+(load "~/dev/emacs2/functionality/align-repeat")
 
 ;; Major Modes for Languages
 (load "~/dev/emacs2/modes/js")
@@ -30,3 +32,8 @@
 (load "~/dev/emacs2/modes/yml")
 (load "~/dev/emacs2/modes/json")
 ;; TODO: XML
+
+
+;; Reddit mode
+;;(load "~/dev/emacs2/functionality/tree-mode")
+;;(load "~/dev/emacs2/functionality/reddit")

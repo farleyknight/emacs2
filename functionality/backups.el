@@ -1,5 +1,3 @@
-
-
 ;; Found these bits from
 ;; http://snarfed.org/space/gnu%20emacs%20backup%20files
 
