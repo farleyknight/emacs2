@@ -13,6 +13,7 @@
 (load "~/dev/emacs2/functionality/cycle-buffer")
 (load "~/dev/emacs2/functionality/cycle-buffer-config")
 (load "~/dev/emacs2/functionality/align-repeat")
+(load "~/dev/emacs2/functionality/tab-width")
 
 ;; Major Modes for Languages
 (load "~/dev/emacs2/modes/js")
