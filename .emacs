@@ -4,6 +4,11 @@
 ;; Turn "yes or no" into "y or n"
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; A bunch of Mac OS X settings
+(setq ns-function-modifier 'control)
+(setq ns-command-modifier 'meta)
+
+
 ;; Functionality
 (load "~/dev/emacs2/functionality/backups")
 (load "~/dev/emacs2/functionality/keybindings")
@@ -14,6 +19,10 @@
 (load "~/dev/emacs2/functionality/cycle-buffer-config")
 (load "~/dev/emacs2/functionality/align-repeat")
 (load "~/dev/emacs2/functionality/tab-width")
+
+;; Directory Tree
+(load "~/dev/emacs2/functionality/directory-tree")
+
 
 ;; Major Modes for Languages
 (load "~/dev/emacs2/modes/js")
@@ -34,7 +43,3 @@
 (load "~/dev/emacs2/modes/json")
 ;; TODO: XML
 
-
-;; Reddit mode
-;;(load "~/dev/emacs2/functionality/tree-mode")
-;;(load "~/dev/emacs2/functionality/reddit")
