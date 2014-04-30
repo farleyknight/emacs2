@@ -31,6 +31,7 @@
 (load "~/dev/emacs2/modes/csharp")
 (load "~/dev/emacs2/modes/scala")
 (load "~/dev/emacs2/modes/java")
+(load "~/dev/emacs2/modes/haskell")
 ;; TODO: Haskell
 ;; TODO: Clojure
 
@@ -42,4 +43,3 @@
 (load "~/dev/emacs2/modes/yml")
 (load "~/dev/emacs2/modes/json")
 ;; TODO: XML
-
