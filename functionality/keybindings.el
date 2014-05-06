@@ -5,3 +5,5 @@
 ;; align-regexp with C-a r
 (global-unset-key "\C-a")
 (global-set-key "\C-ar" 'align-regexp)
+
+(global-set-key "\C-xr" 'replace-string)
