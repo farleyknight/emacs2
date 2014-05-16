@@ -12,11 +12,7 @@
 (load "~/dev/emacs2/functionality/tab-width")
 (load "~/dev/emacs2/functionality/comment-region")
 (load "~/dev/emacs2/functionality/color-theme")
-
-;; Line numbers
 (load "~/dev/emacs2/functionality/line-numbers")
-
-;; Directory Tree
 (load "~/dev/emacs2/functionality/directory-tree")
 
 
@@ -25,17 +21,19 @@
 (load "~/dev/emacs2/modes/ruby")
 (load "~/dev/emacs2/modes/php")
 (load "~/dev/emacs2/modes/csharp")
-(load "~/dev/emacs2/modes/scala")
 (load "~/dev/emacs2/modes/java")
 (load "~/dev/emacs2/modes/haskell")
-;; TODO: Haskell
+
+;; This version of scala-mode is broken!
+;; (load "~/dev/emacs2/modes/scala")
+
+
 ;; TODO: Clojure
 
-
-;; Major Modes for Templates, Data Formats, etc
+;; ;; Major Modes for Templates, Data Formats, etc
 (load "~/dev/emacs2/modes/css")
 (load "~/dev/emacs2/modes/rhtml")
 (load "~/dev/emacs2/modes/markdown")
 (load "~/dev/emacs2/modes/yml")
 (load "~/dev/emacs2/modes/json")
-;; TODO: XML
+;; ;; TODO: XML
