@@ -16,6 +16,7 @@
 (load "~/dev/emacs2/functionality/directory-tree")
 
 
+
 ;; Major Modes for Languages
 (load "~/dev/emacs2/modes/js")
 (load "~/dev/emacs2/modes/ruby")
@@ -23,6 +24,8 @@
 (load "~/dev/emacs2/modes/csharp")
 (load "~/dev/emacs2/modes/java")
 (load "~/dev/emacs2/modes/haskell")
+(load "~/dev/emacs2/modes/ocaml")
+(load "~/dev/emacs2/modes/jst")
 
 ;; This version of scala-mode is broken!
 ;; (load "~/dev/emacs2/modes/scala")
