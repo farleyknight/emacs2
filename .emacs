@@ -26,6 +26,7 @@
 (load "~/dev/emacs2/modes/haskell")
 (load "~/dev/emacs2/modes/ocaml")
 (load "~/dev/emacs2/modes/jst")
+(load "~/dev/emacs2/modes/idris")
 
 ;; This version of scala-mode is broken!
 ;; (load "~/dev/emacs2/modes/scala")

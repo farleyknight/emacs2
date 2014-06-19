@@ -10,5 +10,8 @@
 (setq ns-command-modifier 'meta)
 
 ;; Hide toolbar (especially in Emacs GUI)
-(if (fboundp 'tool-bar-mode)    
+(if (fboundp 'tool-bar-mode)
     (tool-bar-mode -1))
+
+;; Show cursor as a box in all versions of Emacs
+(setq-default cursor-type 'box)
