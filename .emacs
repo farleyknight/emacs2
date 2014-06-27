@@ -20,6 +20,7 @@
 ;; Major Modes for Languages
 (load "~/dev/emacs2/modes/js")
 (load "~/dev/emacs2/modes/ruby")
+(load "~/dev/emacs2/modes/crystal")
 (load "~/dev/emacs2/modes/php")
 (load "~/dev/emacs2/modes/csharp")
 (load "~/dev/emacs2/modes/java")
