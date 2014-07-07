@@ -1,6 +1,7 @@
 
 ;; Functionality
 (load "~/dev/emacs2/functionality/startup")
+(load "~/dev/emacs2/functionality/delete")
 (load "~/dev/emacs2/functionality/backups")
 (load "~/dev/emacs2/functionality/keybindings")
 (load "~/dev/emacs2/functionality/indent-buffer")
@@ -32,13 +33,15 @@
 ;; This version of scala-mode is broken!
 ;; (load "~/dev/emacs2/modes/scala")
 
-
 ;; TODO: Clojure
 
 ;; ;; Major Modes for Templates, Data Formats, etc
 (load "~/dev/emacs2/modes/css")
 (load "~/dev/emacs2/modes/rhtml")
-(load "~/dev/emacs2/modes/markdown")
 (load "~/dev/emacs2/modes/yml")
 (load "~/dev/emacs2/modes/json")
-;; ;; TODO: XML
+;; TODO: Better Markdown!
+;; The current directory for markdown-mode has been
+;; crashing my local copy of Emacs (on my Mac).
+;;
+;; TODO: XML

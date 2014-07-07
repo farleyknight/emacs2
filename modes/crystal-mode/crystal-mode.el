@@ -60,7 +60,7 @@
     "\\>"))
 
 (defconst crystal-block-beg-keywords
-  '("class" "struct" "module" "def" "if" "unless" "case" "while" "until" "for" "begin" "do")
+  '("class" "struct" "lib" "module" "def" "if" "unless" "case" "while" "until" "for" "begin" "do")
   "Keywords at the beginning of blocks.")
 
 (defconst crystal-block-beg-re
@@ -72,7 +72,7 @@
   "Regexp to match")
 
 (defconst crystal-indent-beg-re
-  (concat "\\(\\s *" (regexp-opt '("class" "module" "def") t) "\\)\\|"
+  (concat "\\(\\s *" (regexp-opt '("class" "struct" "lib" "module" "def") t) "\\)\\|"
           (regexp-opt '("if" "unless" "case" "while" "until" "for" "begin")))
   "Regexp to match where the indentation gets deeper.")
 
@@ -483,6 +483,8 @@ Also ignores spaces after parenthesis when 'space."
       (cond
        ((and (memq (char-before) '(?@ ?$)) (looking-at "\\sw"))
         (goto-char pnt))
+
+       ;; looking at "
        ((looking-at "[\"`]")            ;skip string
         (cond
          ((and (not (eobp))
@@ -491,6 +493,8 @@ Also ignores spaces after parenthesis when 'space."
          (t
           (setq in-string (point))
           (goto-char end))))
+
+       ;; looking at '
        ((looking-at "'")
         (cond
          ((and (not (eobp))
@@ -499,8 +503,12 @@ Also ignores spaces after parenthesis when 'space."
          (t
           (setq in-string (point))
           (goto-char end))))
+
+       ;; looking at =
        ((looking-at "/=")
         (goto-char pnt))
+
+       ;; looking at /
        ((looking-at "/")
         (cond
          ((and (not (eobp)) (crystal-expr-beg 'expr-re))
@@ -510,6 +518,8 @@ Also ignores spaces after parenthesis when 'space."
             (goto-char end)))
          (t
           (goto-char pnt))))
+
+       ;; looking at %
        ((looking-at "%")
         (cond
          ((and (not (eobp))
@@ -547,10 +557,16 @@ Also ignores spaces after parenthesis when 'space."
        ((looking-at "\\$")              ;skip $char
         (goto-char pnt)
         (forward-char 1))
+
        ((looking-at "#")                ;skip comment
         (forward-line 1)
-        (goto-char (point))
-        )
+        (goto-char (point)))
+
+       ((looking-at "fun")              ;skip fun
+        (forward-line 1)
+        (goto-char (point)))
+
+
        ((looking-at "[\\[{(]")
         (let ((deep (crystal-deep-indent-paren-p (char-after))))
           (if (and deep (or (not (eq (char-after) ?\{)) (crystal-expr-beg)))
@@ -1391,11 +1407,13 @@ buffer position `limit' or the end of the buffer."
                "elsif"
                "else"
                "fail"
+               "fun"
                "ensure"
                "for"
                "end"
                "if"
                "in"
+               "lib"
                "module"
                "next"
                "not"
@@ -1464,8 +1482,8 @@ buffer position `limit' or the end of the buffer."
      ("[^$@?\\]\\(#[^$@{\n].*$\\)" 1 comment)
      ("[^a-zA-Z_]\\(\\?\\(\\\\[CM]-\\)*.\\)" 1 string)
      ("^\\s *\\(require\\|load\\).*$" nil include)
-     ("^\\s *\\(include\\|alias\\|undef\\).*$" nil decl)
-     ("^\\s *\\<\\(class\\|def\\|module\\)\\>" "[)\n;]" defun)
+     ("^\\s *\\(include\\|alias\\|undef\\|fun\\).*$" nil decl)
+     ("^\\s *\\<\\(class\\|def\\|module\\|struct\\|lib\\)\\>" "[)\n;]" defun)
      ("[^_]\\<\\(begin\\|case\\|else\\|elsif\\|end\\|ensure\\|for\\|if\\|unless\\|rescue\\|then\\|when\\|while\\|until\\|do\\|yield\\)\\>\\([^_]\\|$\\)" 1 defun)
      ("[^_]\\<\\(and\\|break\\|next\\|raise\\|fail\\|in\\|not\\|or\\|redo\\|retry\\|return\\|super\\|yield\\|catch\\|throw\\|self\\|nil\\)\\>\\([^_]\\|$\\)" 1 keyword)
      ("\\$\\(.\\|\\sw+\\)" nil type)
