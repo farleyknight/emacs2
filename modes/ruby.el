@@ -10,11 +10,13 @@
 (add-to-list 'auto-mode-alist '("Rakefile$"    . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$"     . ruby-mode))
 (add-to-list 'auto-mode-alist '("Guardfile$"   . ruby-mode))
+(add-to-list 'auto-mode-alist '("Vagrantfile$" . ruby-mode))
 
 ;; Standard configuration options
 (setq ruby-deep-indent-paren       nil)
 (setq ruby-deep-indent-paren-style nil)
 (setq ruby-deep-arglist            nil)
 
-;; Ruby is not a C-mode, so we need to add this ourselves
+;; NOTE: (6/27/2014) I believe C-x C-; is the new key binding
+;; for `comment-region`. If so, please remove this.
 (global-set-key (kbd "C-c C-c") 'comment-region)

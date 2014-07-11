@@ -5,9 +5,9 @@
 ;; ***** BEGIN LICENSE BLOCK *****
 ;; Version: MPL 1.1/GPL 2.0/LGPL 2.1
 
-;; The contents of this file are subject to the Mozilla Public License Version 
-;; 1.1 (the "License"); you may not use this file except in compliance with 
-;; the License. You may obtain a copy of the License at 
+;; The contents of this file are subject to the Mozilla Public License Version
+;; 1.1 (the "License"); you may not use this file except in compliance with
+;; the License. You may obtain a copy of the License at
 ;; http://www.mozilla.org/MPL/
 
 ;; Software distributed under the License is distributed on an "AS IS" basis,
@@ -57,12 +57,12 @@
   "*rhtml-ruby-hook temp buffer*"
   "Buffer name to use for temporary Ruby buffer. Should begin with a * or
   space as those carry special meaning.")
-  
+
 (defun rhtml-ruby-temp-buffer ()
   "Returns the temporary ruby buffer creating it if needed."
   (or (get-buffer rhtml-ruby-temp-buffer-name)
       (let ((ruby-buffer (get-buffer-create rhtml-ruby-temp-buffer-name)))
-	(with-current-buffer ruby-buffer
+        (with-current-buffer ruby-buffer
           (buffer-disable-undo)
           (ruby-mode))
         ruby-buffer)))
@@ -75,7 +75,7 @@ current buffer.  All existing text in the temporary buffer is replaced."
     (with-current-buffer temp-buffer
       (delete-region (point-min) (point-max))
       (insert-buffer-substring source-buffer begin end))))
-      
+
 (defun rhtml-ruby-indent-at (indent-pos)
   "Returns the indentation for INDENT-POS inside the temporary Ruby buffer
 after updating the indenting."
