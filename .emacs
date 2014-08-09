@@ -1,5 +1,6 @@
 
 ;; Functionality
+(load "~/dev/emacs2/functionality/ansi")
 (load "~/dev/emacs2/functionality/startup")
 (load "~/dev/emacs2/functionality/delete")
 (load "~/dev/emacs2/functionality/backups")
@@ -7,7 +8,7 @@
 (load "~/dev/emacs2/functionality/indent-buffer")
 (load "~/dev/emacs2/functionality/cleanup-file")
 (load "~/dev/emacs2/functionality/make-directory-when-missing")
-;; (load "~/dev/emacs2/functionality/cycle-buffer")
+(load "~/dev/emacs2/functionality/cycle-buffer")
 ;; (load "~/dev/emacs2/functionality/cycle-buffer-config")
 (load "~/dev/emacs2/functionality/align-repeat")
 (load "~/dev/emacs2/functionality/tab-width")
@@ -26,7 +27,7 @@
 (load "~/dev/emacs2/modes/csharp")
 (load "~/dev/emacs2/modes/java")
 (load "~/dev/emacs2/modes/clojure")
-;; (load "~/dev/emacs2/modes/haskell")
+(load "~/dev/emacs2/modes/haskell")
 ;; (load "~/dev/emacs2/modes/ocaml")
 (load "~/dev/emacs2/modes/jst")
 ;; (load "~/dev/emacs2/modes/idris")

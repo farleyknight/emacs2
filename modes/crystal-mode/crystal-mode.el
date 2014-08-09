@@ -60,7 +60,7 @@
     "\\>"))
 
 (defconst crystal-block-beg-keywords
-  '("class" "struct" "lib" "module" "def" "if" "unless" "case" "while" "until" "for" "begin" "do")
+  '("class" "struct" "enum" "lib" "module" "def" "if" "unless" "case" "while" "until" "for" "begin" "do")
   "Keywords at the beginning of blocks.")
 
 (defconst crystal-block-beg-re
@@ -72,7 +72,7 @@
   "Regexp to match")
 
 (defconst crystal-indent-beg-re
-  (concat "\\(\\s *" (regexp-opt '("class" "struct" "lib" "module" "def") t) "\\)\\|"
+  (concat "\\(\\s *" (regexp-opt '("class" "struct" "enum" "lib" "module" "def") t) "\\)\\|"
           (regexp-opt '("if" "unless" "case" "while" "until" "for" "begin")))
   "Regexp to match where the indentation gets deeper.")
 
@@ -1409,6 +1409,7 @@ buffer position `limit' or the end of the buffer."
                "fail"
                "fun"
                "ensure"
+               "enum"
                "for"
                "end"
                "if"
@@ -1483,7 +1484,7 @@ buffer position `limit' or the end of the buffer."
      ("[^a-zA-Z_]\\(\\?\\(\\\\[CM]-\\)*.\\)" 1 string)
      ("^\\s *\\(require\\|load\\).*$" nil include)
      ("^\\s *\\(include\\|alias\\|undef\\|fun\\).*$" nil decl)
-     ("^\\s *\\<\\(class\\|def\\|module\\|struct\\|lib\\)\\>" "[)\n;]" defun)
+     ("^\\s *\\<\\(class\\|def\\|module\\|enum\\|struct\\|lib\\)\\>" "[)\n;]" defun)
      ("[^_]\\<\\(begin\\|case\\|else\\|elsif\\|end\\|ensure\\|for\\|if\\|unless\\|rescue\\|then\\|when\\|while\\|until\\|do\\|yield\\)\\>\\([^_]\\|$\\)" 1 defun)
      ("[^_]\\<\\(and\\|break\\|next\\|raise\\|fail\\|in\\|not\\|or\\|redo\\|retry\\|return\\|super\\|yield\\|catch\\|throw\\|self\\|nil\\)\\>\\([^_]\\|$\\)" 1 keyword)
      ("\\$\\(.\\|\\sw+\\)" nil type)
