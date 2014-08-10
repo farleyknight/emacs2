@@ -27,7 +27,7 @@
 (load "~/dev/emacs2/modes/csharp")
 (load "~/dev/emacs2/modes/java")
 (load "~/dev/emacs2/modes/clojure")
-(load "~/dev/emacs2/modes/haskell")
+;; (load "~/dev/emacs2/modes/haskell")
 ;; (load "~/dev/emacs2/modes/ocaml")
 (load "~/dev/emacs2/modes/jst")
 ;; (load "~/dev/emacs2/modes/idris")
